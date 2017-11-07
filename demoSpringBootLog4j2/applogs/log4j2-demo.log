@@ -1,0 +1,28 @@
+[INFO ] 2017-11-07 17:16:17.792 [main] DemoSpringBootLog4j2Application - Starting DemoSpringBootLog4j2Application on U-PALO with PID 13916 (E:\WK_STS_personal\demoSpringBootLog4j2\bin started by u.palo in E:\WK_STS_personal\demoSpringBootLog4j2)
+[DEBUG] 2017-11-07 17:16:17.795 [main] DemoSpringBootLog4j2Application - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+[INFO ] 2017-11-07 17:16:17.796 [main] DemoSpringBootLog4j2Application - No active profile set, falling back to default profiles: default
+[INFO ] 2017-11-07 17:16:22.467 [main] DemoSpringBootLog4j2Application - Started DemoSpringBootLog4j2Application in 4.993 seconds (JVM running for 6.571)
+[DEBUG] 2017-11-07 17:16:37.439 [http-nio-8080-exec-1] IndexController - This is a debug message
+[INFO ] 2017-11-07 17:16:37.440 [http-nio-8080-exec-1] IndexController - This is an info message
+[WARN ] 2017-11-07 17:16:37.440 [http-nio-8080-exec-1] IndexController - This is a warn message
+[ERROR] 2017-11-07 17:16:37.440 [http-nio-8080-exec-1] IndexController - This is an error message
+[DEBUG] 2017-11-07 17:19:06.218 [http-nio-8080-exec-4] IndexController - This is a debug message
+[INFO ] 2017-11-07 17:19:06.218 [http-nio-8080-exec-4] IndexController - This is an info message
+[WARN ] 2017-11-07 17:19:06.219 [http-nio-8080-exec-4] IndexController - This is a warn message
+[ERROR] 2017-11-07 17:19:06.219 [http-nio-8080-exec-4] IndexController - This is an error message
+[DEBUG] 2017-11-07 17:19:08.479 [http-nio-8080-exec-5] IndexController - This is a debug message
+[INFO ] 2017-11-07 17:19:08.479 [http-nio-8080-exec-5] IndexController - This is an info message
+[WARN ] 2017-11-07 17:19:08.479 [http-nio-8080-exec-5] IndexController - This is a warn message
+[ERROR] 2017-11-07 17:19:08.479 [http-nio-8080-exec-5] IndexController - This is an error message
+[DEBUG] 2017-11-07 17:19:09.480 [http-nio-8080-exec-6] IndexController - This is a debug message
+[INFO ] 2017-11-07 17:19:09.480 [http-nio-8080-exec-6] IndexController - This is an info message
+[WARN ] 2017-11-07 17:19:09.480 [http-nio-8080-exec-6] IndexController - This is a warn message
+[ERROR] 2017-11-07 17:19:09.480 [http-nio-8080-exec-6] IndexController - This is an error message
+[DEBUG] 2017-11-07 17:19:11.034 [http-nio-8080-exec-7] IndexController - This is a debug message
+[INFO ] 2017-11-07 17:19:11.034 [http-nio-8080-exec-7] IndexController - This is an info message
+[WARN ] 2017-11-07 17:19:11.034 [http-nio-8080-exec-7] IndexController - This is a warn message
+[ERROR] 2017-11-07 17:19:11.034 [http-nio-8080-exec-7] IndexController - This is an error message
+[DEBUG] 2017-11-07 17:19:12.323 [http-nio-8080-exec-8] IndexController - This is a debug message
+[INFO ] 2017-11-07 17:19:12.323 [http-nio-8080-exec-8] IndexController - This is an info message
+[WARN ] 2017-11-07 17:19:12.323 [http-nio-8080-exec-8] IndexController - This is a warn message
+[ERROR] 2017-11-07 17:19:12.323 [http-nio-8080-exec-8] IndexController - This is an error message

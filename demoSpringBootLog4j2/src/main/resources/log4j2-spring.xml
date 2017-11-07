@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration monitorInterval="60">
+	<Properties>
+		<Property name="log-path">applogs</Property>
+		<Property name="LOG_PATTERN">[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</Property>
+	</Properties>
+	<Appenders>
+		<Console name="Console-Appender" target="SYSTEM_OUT">
+			<PatternLayout>
+				<pattern>
+					[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n
+				</pattern>
+				>
+			</PatternLayout>
+		</Console>
+<!-- 		<File name="App-File-Appender" fileName="${log-path}/app_log.log"> -->
+<!-- 			<PatternLayout> -->
+<!-- 				<pattern> -->
+<!-- 					[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n -->
+<!-- 				</pattern> -->
+<!-- 			</PatternLayout> -->
+<!-- 		</File> -->
+<!-- 		<File name="SpringBoot-File-Appender" fileName="${log-path}/springboot_log.log"> -->
+<!-- 			<PatternLayout> -->
+<!-- 				<pattern> -->
+<!-- 					${LOG_PATTERN} -->
+<!-- 				</pattern> -->
+<!-- 			</PatternLayout> -->
+<!-- 		</File> -->
+	<!-- Rolling File Appender -->
+			<RollingFile name="SpringBoot-File-Appender_2" fileName="${log-path}/log4j2-demo.log"
+				filePattern="${log-path}/log4j2-demo-%d{yyyy-MM-dd}-%i.log">
+				<PatternLayout>
+					<Pattern>${LOG_PATTERN}</Pattern>
+				</PatternLayout>
+				<Policies>
+					<SizeBasedTriggeringPolicy size="10MB" />
+				</Policies>
+				<DefaultRolloverStrategy max="10" />
+			</RollingFile>
+			
+			<!-- Rolling File Appender -->
+			<RollingFile name="SpringBoot-File-Appender" fileName="${log-path}/springboot_log.log"
+				filePattern="${log-path}/springboot_log-%d{yyyy-MM-dd}-%i.log">
+				<PatternLayout>
+					<Pattern>${LOG_PATTERN}</Pattern>
+				</PatternLayout>
+				<Policies>
+					<SizeBasedTriggeringPolicy size="10MB" />
+				</Policies>
+				<DefaultRolloverStrategy max="10" />
+			</RollingFile>
+	</Appenders>
+	<Loggers>
+		<Logger name="org.springframework.web" level="info" additivity="false">
+			<AppenderRef ref="SpringBoot-File-Appender" />
+			<AppenderRef ref="Console-Appender" />
+		</Logger>
+		<Logger name="it.umberto.palo" level="trace"
+			additivity="false">
+			<AppenderRef ref="SpringBoot-File-Appender_2" />
+			<AppenderRef ref="Console-Appender" />
+		</Logger>
+		<Root>
+			<AppenderRef ref="Console-Appender" />
+		</Root>
+	</Loggers>
+	<!-- SMTP Appender -->
+<!-- 	<SMTP name="MailAppender" subject="Log4j2 Demo [PROD]" to="youremail@example.com" -->
+<!-- 		from="log4j2-demo-alerts@example.com" smtpHost="yourSMTPHost" -->
+<!-- 		smtpPort="587" smtpUsername="yourSMTPUsername" smtpPassword="yourSMTPPassword" -->
+<!-- 		bufferSize="1"> -->
+<!-- 		<ThresholdFilter level="ERROR" onMatch="ACCEPT" -->
+<!-- 			onMismatch="DENY" /> -->
+<!-- 		<PatternLayout> -->
+<!-- 			<Pattern>${LOG_PATTERN}</Pattern> -->
+<!-- 		</PatternLayout> -->
+<!-- 	</SMTP> -->
+</Configuration>
